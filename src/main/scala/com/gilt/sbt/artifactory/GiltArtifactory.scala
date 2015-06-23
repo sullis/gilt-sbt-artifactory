@@ -1,6 +1,7 @@
 package com.gilt.sbt.artifactory
 
 import sbt._
+import sbt.Keys._
 
 object GiltArtifactory extends AutoPlugin {
   override def trigger = allRequirements
@@ -14,9 +15,9 @@ object GiltArtifactory extends AutoPlugin {
   )
 
   override def projectSettings = Seq(
-    credentials += Credentials("Artifactory Realm", "giltgroupe.artifactoryonline.com", System.getenv("ART_USER"), System.getenv("ART_PASS"))
+    credentials += Credentials("Artifactory Realm", "giltgroupe.artifactoryonline.com", System.getenv("ART_USER"), System.getenv("ART_PASS")),
 
-    resolvers := Seq(
+    resolvers ++= Seq(
       DefaultMavenRepository,
       Resolver.url("Typesafe Cache", url("http://giltgroupe.artifactoryonline.com/giltgroupe/typesafe.releases")),
       Resolver.url("Gilt Common Cache", url("http://giltgroupe.artifactoryonline.com/giltgroupe/gilt.common"))(defaultIvyPattern),
