@@ -18,8 +18,11 @@ object GiltArtifactory extends AutoPlugin {
 
     resolvers := Seq(
       DefaultMavenRepository,
-      Resolver.url("Typesafe Cache", url("http://grhodes.artifactoryonline.com/grhodes/typesafe.releases")),
-      Resolver.url("Gilt repository", url("http://grhodes.artifactoryonline.com/grhodes/gilt.internal.releases"))(defaultIvyPattern),
+      Resolver.url("Typesafe Cache", url("http://giltgroupe.artifactoryonline.com/giltgroupe/typesafe.releases")),
+      Resolver.url("Gilt Common Cache", url("http://giltgroupe.artifactoryonline.com/giltgroupe/gilt.common"))(defaultIvyPattern),
+      Resolver.url("Gilt Internal Releases Cache", url("http://giltgroupe.artifactoryonline.com/giltgroupe/gilt.internal.releases"))(defaultIvyPattern),
+      Resolver.url("Gilt Internal Snapshots Cache", url("http://giltgroupe.artifactoryonline.com/giltgroupe/gilt.internal.snapshots"))(defaultIvyPattern),
+      Resolver.url("SBT Plugin Releases Cache", url("http://giltgroupe.artifactoryonline.com/giltgroupe/sbt-plugin-releases"))(defaultIvyPattern),
       Resolver.typesafeRepo("releases"),
       Resolver.typesafeIvyRepo("releases"),
       Resolver.bintrayRepo("giltgroupe", "maven"),

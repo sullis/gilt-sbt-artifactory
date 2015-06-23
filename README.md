@@ -10,3 +10,12 @@ Add the following to your `project/plugins.sbt` file:
 
     resolvers += Resolver.url("myyk-bintray-sbt-plugins", url("https://dl.bintray.com/myyk/sbt-plugins/"))(Resolver.ivyStylePatterns)
     addSbtPlugin("com.github.myyk" % "gilt-sbt-artifactory" % "0.0.1")
+
+# Credentials
+
+User name and passwords for Artifactory are passed in through environment variables, `ART_USER` and `ART_PASS`.
+
+This allows us to use the same mechanism in Travis by using the `travis` Ruby gem to add encrypted credentials to the `.travis.yml` for your project.
+
+    travis encrypt ART_USER=travis --add env.global
+    travis encrypt ART_PASS=password --add env.global
