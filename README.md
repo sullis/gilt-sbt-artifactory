@@ -10,4 +10,3 @@ Add the following to your `project/plugins.sbt` file:
 
     resolvers += Resolver.url("myyk-bintray-sbt-plugins", url("https://dl.bintray.com/myyk/sbt-plugins/"))(Resolver.ivyStylePatterns)
     addSbtPlugin("com.github.myyk" % "gilt-sbt-artifactory" % "0.0.1")
-
