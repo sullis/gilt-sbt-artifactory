@@ -21,11 +21,11 @@ object GiltArtifactory extends AutoPlugin {
 
     resolvers ++= Seq(
       DefaultMavenRepository,
-      Resolver.url("Typesafe Cache", url("http://giltgroupe.artifactoryonline.com/giltgroupe/typesafe.releases")),
-      Resolver.url("Gilt Common Cache", url("http://giltgroupe.artifactoryonline.com/giltgroupe/gilt.common"))(defaultIvyPattern),
-      Resolver.url("Gilt Internal Releases Cache", url("http://giltgroupe.artifactoryonline.com/giltgroupe/gilt.internal.releases"))(defaultIvyPattern),
-      Resolver.url("Gilt Internal Snapshots Cache", url("http://giltgroupe.artifactoryonline.com/giltgroupe/gilt.internal.snapshots"))(defaultIvyPattern),
-      Resolver.url("SBT Plugin Releases Cache", url("http://giltgroupe.artifactoryonline.com/giltgroupe/sbt-plugin-releases"))(Patterns(Vector("[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]"), Vector("[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]"), isMavenCompatible = false, descriptorOptional = true, skipConsistencyCheck = false)),
+      Resolver.url("Typesafe Cache", url("https://giltgroupe.artifactoryonline.com/giltgroupe/typesafe.releases")),
+      Resolver.url("Gilt Common Cache", url("https://giltgroupe.artifactoryonline.com/giltgroupe/gilt.common"))(defaultIvyPattern),
+      Resolver.url("Gilt Internal Releases Cache", url("https://giltgroupe.artifactoryonline.com/giltgroupe/gilt.internal.releases"))(defaultIvyPattern),
+      Resolver.url("Gilt Internal Snapshots Cache", url("https://giltgroupe.artifactoryonline.com/giltgroupe/gilt.internal.snapshots"))(defaultIvyPattern),
+      Resolver.url("SBT Plugin Releases Cache", url("https://giltgroupe.artifactoryonline.com/giltgroupe/sbt-plugin-releases"))(Patterns(Vector("[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]"), Vector("[organisation]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]"), isMavenCompatible = false, descriptorOptional = true, skipConsistencyCheck = false)),
       Resolver.url("giltgroupe-sbt-plugin-releases", url("https://dl.bintray.com/content/giltgroupe/sbt-plugin-releases/"))(defaultIvyPattern),
       Resolver.typesafeRepo("releases"),
       Resolver.typesafeIvyRepo("releases"),
