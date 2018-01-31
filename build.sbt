@@ -21,8 +21,8 @@ licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 
 pomExtra := (
   <scm>
-    <url>https://github.com/gilt/sbt-codedeploy.git</url>
-    <connection>scm:git:git@github.com:gilt/sbt-codedeploy.git</connection>
+    <url>https://github.com/myyk/gilt-sbt-artifactory.git</url>
+    <connection>scm:git:git@github.com:myyk/gilt-sbt-artifactory.git</connection>
   </scm>
   <developers>
     <developer>
