@@ -6,6 +6,8 @@ organization := "com.github.myyk"
 
 sbtPlugin := true
 
+crossSbtVersions := Vector("0.13.16", "1.1.0")
+
 bintrayPackageLabels := Seq("artifactory")
 
 scalacOptions ++= Seq(
