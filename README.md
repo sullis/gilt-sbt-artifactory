@@ -9,7 +9,7 @@ SBT Plugin to add Gilt Artifactory resolvers in a maintainable way for many sbt 
 Add the following to your `project/plugins.sbt` file:
 
     resolvers += Resolver.url("myyk-bintray-sbt-plugins", url("https://dl.bintray.com/myyk/sbt-plugins/"))(Resolver.ivyStylePatterns)
-    addSbtPlugin("com.github.myyk" % "gilt-sbt-artifactory" % "0.0.4")
+    addSbtPlugin("com.github.myyk" % "gilt-sbt-artifactory" % "0.0.5")
 
 If plugins aren't resolving try to put the same lines from above in `project/project/plugins.sbt`.
 
